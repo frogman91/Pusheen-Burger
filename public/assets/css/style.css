@@ -1,0 +1,51 @@
+@font-face { font-family: Comfortaa-Bold; src: url("../TTF/Comfortaa-Bold.ttf"); }
+@font-face { font-family: Comfortaa-Light; src: url("../TTF/Comfortaa-Light.ttf"); }
+@font-face { font-family: Comfortaa-Regular; src: url("../TTF/Comfortaa-Regular.ttf"); }
+
+li {
+  padding: 5px;
+  margin: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+body {
+  background-color: #fef2e6;
+  font-family: "Comfortaa-Bold";
+}
+
+.catGif {
+  height:250px;
+  width:250px;
+}
+
+.eatButt {
+  margin: 5px 0;
+  font-family: "Comfortaa-Light";
+  width: 100px;
+  font-size: 18px;
+}
+
+label {
+  font-size: 30px;
+}
+
+.burgImg {
+  height:100px;
+  width:100px;
+}
+
+.burgName {
+  font-size: 28px;
+}

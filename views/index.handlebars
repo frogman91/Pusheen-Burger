@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img class="catGif" src="assets/catBurger.gif" alt="">
+    </div>
+    <div class="col-md-4 text-center">
+      <h1>Pusheen Burgaa!</h1>
+    </div>
+    <div class="col-md-4 text-center">
+      <img class="catGif" src="assets/catBurger.gif" alt="">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <h2>Eat Da Burgaa!</h2>
+      <ul>
+        {{#each burgers}} {{#unless this.eaten}}
+        <div class="burgName">
+          {{this.name}}
+          <img class="burgImg" src="assets/cat-burger.jpg" alt="">
+
+          <form action="/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="eaten" value="true">
+            <button class="eatButt" type="submit">EAT IT!</button>
+          </form>
+
+          {{> burgers/delete-burger}}
+        </div>
+        {{/unless}} {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <h2>Add Da Burgaa:</h2>
+      <form class="create-update-form" action="/" method="POST">
+
+        <div class="form-group">
+          <label for="ca"></label>
+          <input type="text" id="ca" name="name">
+        </div>
+
+        <button class="eatButt" type="submit">Add Burgaa</button>
+      </form>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <h2>Devoured Da Burgaa?</h2>
+
+      <ul>
+        {{#each burgers}} {{#if this.eaten}}
+        <div class="burgName">
+          {{this.name}}
+          <img class="burgImg" src="assets/cat-burger.jpg" alt="">
+
+          <form action="/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="eaten" value="false">
+            <button class="eatButt" type="submit">That was good!</button>
+          </form>
+
+          {{> burgers/delete-burger}}
+        </div>
+        {{/if}} {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
